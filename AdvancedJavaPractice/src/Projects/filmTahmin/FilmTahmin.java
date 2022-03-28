@@ -49,7 +49,7 @@ public class FilmTahmin {
         List<String> arr = new ArrayList<>();
         // for döngüsü ile doğru tahmin edilen harfler ekrana yazıldı
         for (int i = 0; i < s.length(); i++) {
-            arr.add(i, "_");
+            arr.add(i, "_") ;
 
         }
 
