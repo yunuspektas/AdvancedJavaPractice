@@ -31,10 +31,11 @@ public class FilmTahmin {
 
         int wantedFilmNo = scan.nextInt() - 1;
         System.out.println("Seçtiğiniz filmde " + film.get(wantedFilmNo).length() + " harf var.");
-        for (int i = 0; i < film.get(wantedFilmNo).length(); i++) {
-            System.out.print("_" + " ");
 
-        }
+//        for (int i = 0; i < film.get(wantedFilmNo).length(); i++) {
+//            System.out.print("_" + " ");
+//
+//        }
         System.out.println("");
         guessNameOfFilm(film.get(wantedFilmNo));
 
@@ -80,6 +81,7 @@ public class FilmTahmin {
             }
             if (!arr.contains("_")) {
                 System.out.println("Tebrikler Bildiniz ");
+                System.out.println(s) ;
                 break;
             }
 
