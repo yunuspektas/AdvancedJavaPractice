@@ -32,10 +32,6 @@ public class FilmTahmin {
         int wantedFilmNo = scan.nextInt() - 1;
         System.out.println("Seçtiğiniz filmde " + film.get(wantedFilmNo).length() + " harf var.");
 
-//        for (int i = 0; i < film.get(wantedFilmNo).length(); i++) {
-//            System.out.print("_" + " ");
-//
-//        }
         System.out.println("");
         guessNameOfFilm(film.get(wantedFilmNo));
 
@@ -49,8 +45,7 @@ public class FilmTahmin {
         List<String> arr = new ArrayList<>();
         // for döngüsü ile doğru tahmin edilen harfler ekrana yazıldı
         for (int i = 0; i < s.length(); i++) {
-            arr.add(i, "_") ;
-
+            arr.add(i, "_");
         }
 
         int lastGuessNumber = 0;
@@ -60,7 +55,6 @@ public class FilmTahmin {
             System.out.println("Bir harf Tahmin ediniz : " + "( " + lastGuessNumber + " / " + guessNumber + " )");
             for (int i = 0; i < arr.size(); i++) {
                 System.out.print(arr.get(i) + " ");
-
             }
             System.out.println("");
             String letter = scan.next().toUpperCase();
@@ -71,7 +65,6 @@ public class FilmTahmin {
                     if (s.split("")[i].equals(letter)) {
                         arr.set(i, letter);
                     }
-
                 }
             }
             if (lastGuessNumber == guessNumber) {
@@ -81,12 +74,9 @@ public class FilmTahmin {
             }
             if (!arr.contains("_")) {
                 System.out.println("Tebrikler Bildiniz ");
-                System.out.println(s) ;
+                System.out.println(s);
                 break;
             }
-
         }
-
-
     }
 }
