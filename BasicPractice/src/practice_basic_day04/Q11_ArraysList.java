@@ -24,7 +24,7 @@ public class Q11_ArraysList {
         List<String> nameList = new ArrayList<>();
         while (true) {
 
-            System.out.print("Çıkış için 0 a basınız , Lütfen isminizi giriniz : ");
+            System.out.print("Çıkış için 0 a basınız , Lütfen isminizi giriniz  : ");
             String name = scan.next();
             // 2. adim
             name = name.replace(" ", "");
