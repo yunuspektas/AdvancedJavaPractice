@@ -1,11 +1,9 @@
 package _10_List;
-
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
-
 
 public class QMarket {
     /* TASK :
@@ -26,13 +24,16 @@ public class QMarket {
      * 			 ortalama kazançtan aşağıysa o günleri return yap.
      * */
 
-
+/*
     static List<String> gunler = new ArrayList<>(Arrays.asList(" Pazartesi", " Sali", " Carsamba", " Persembe", " Cuma", " Cumartesi", " Pazar"));//1. adım
     static List<Double> gunlukKazanclar = new ArrayList<>();//2. adım
     static double ciro = 0;
 
+ */
+
     public static void main(String[] args) {
 
+        /*
         int gun = 0;
         Scanner sc = new Scanner(System.in);
         while (gun < 7) {//3. adım
@@ -81,5 +82,9 @@ public class QMarket {
     private static double getOrtalamaKazanc() {//4. adım
         double ortalama = ciro / 7;
         return ortalama;
+
+ */
     }
+
+
 }
