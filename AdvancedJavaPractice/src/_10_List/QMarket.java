@@ -20,7 +20,7 @@ public class QMarket {
      * 			 for döngüsü ile tüm günleri ortalama kazanç ile karşılaştır
      * 			 ortalama kazançtan yüksekse o günleri return yap.
      * 6. Adım : getOrtalamaninAltindaKazancGünleri() adlı method oluşturun.
-     * 			 for döngüsü ile tüm günleri  ortalama kazanç ile karşılaştır
+     * 			 for döngüsü ile tüm günleri ortalama kazanç ile karşılaştır
      * 			 ortalama kazançtan aşağıysa o günleri return yap.
      * */
 
