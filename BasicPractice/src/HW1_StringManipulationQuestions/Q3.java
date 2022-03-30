@@ -1,4 +1,4 @@
-package StringManipulationQuestions;
+package HW1_StringManipulationQuestions;
 
 public class Q3 {
     public static void main(String[] args) {
