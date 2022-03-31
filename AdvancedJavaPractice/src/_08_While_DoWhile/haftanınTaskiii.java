@@ -14,23 +14,21 @@ public class haftanınTaskiii {
 
     public static void main(String[] args) {
 
-        double birakildigiYuskeklik = 4.0; // 4 metre
-        double ziplamaSayisi = 0;
-        double aldigiToplamYol = 0;
-        double zipladigiMesafe = 0;
-
+        Scanner scan = new Scanner(System.in);
+        System.out.print("topun birakildigi ilk yuksekligi  giriniz : ");
+        double yukseklik = scan.nextDouble();
+        double topunToplamYolu=0;
+        int yerevurmaSayisi=0;
         do {
+            yerevurmaSayisi++;
+            topunToplamYolu+=yukseklik;
+            yukseklik*=(0.75);
+            topunToplamYolu+=yukseklik;
+        }
+        while (yukseklik>=1);
 
-            zipladigiMesafe = birakildigiYuskeklik * 3 / 4;
-            aldigiToplamYol += birakildigiYuskeklik + birakildigiYuskeklik * 3 / 4;
-            birakildigiYuskeklik -= birakildigiYuskeklik * 1 / 4;
-            ziplamaSayisi++;
-
-        } while (zipladigiMesafe >= 1);
-
-        System.out.println("Aldığı Toplam Yol : " + aldigiToplamYol);
-        System.out.println("Yere Vurma Sayısı : " + ziplamaSayisi);
-
+        System.out.println("topun vurma sayisi:"+yerevurmaSayisi);
+        System.out.println("topun aldigi toplam yol : "+topunToplamYolu);
 
     }
 }

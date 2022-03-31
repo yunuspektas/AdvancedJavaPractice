@@ -6,9 +6,10 @@ public class Q17_OCAType {
 aşağıdaki kod bloğunun çıktısı ne olur?
  */
     public static void main(String[] args) {
+
         int i = 3;
         while (i < 6) {
-
+            //System.out.println(i);
             i += 1;
             System.out.println(i);
         }
@@ -30,6 +31,3 @@ aşağıdaki kod bloğunun çıktısı ne olur?
 //    3
 //    4
 //    5
-
-
-

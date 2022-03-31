@@ -12,18 +12,19 @@ public class QFibonacci {
 
     public static void main(String[] args) {
 
-    int num = 35 ;
-    List <Integer> list = new ArrayList<>();
-    list.add(1);
-    list.add(1);
+        Scanner scan = new Scanner(System.in);
+        System.out.print("pozitif bir tamsayı giriniz : ");
+        int sayi = scan.nextInt();
 
-        for (int i = 0; i <100 ; i++) {
-           if(list.get(i)+list.get(i+1)<=num) list.add(list.get(i)+list.get(i+1));
-            else break;
+        List<Integer> fibo = new ArrayList<>();
+        fibo.add(1);
+        fibo.add(1);
+        System.out.println(fibo);
+
+        for (int i = 2; fibo.get(i - 2) + fibo.get(i - 1) < sayi; i++) {
+            fibo.add(fibo.get(i - 2) + fibo.get(i - 1));
         }
-        System.out.println(list);
-
-
+        System.out.println(fibo);
 
     }
 }

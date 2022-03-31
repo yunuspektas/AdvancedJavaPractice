@@ -8,9 +8,8 @@ public class Q01 {
 
 		/* TASK :
            String girildiginde ilk iki karakteri haric string return eden java method yaziniz
-           Ancak ilk karakter 'g' ve ikinci karakteri 'h' ise bu karakterler de return edilsin
-          ORNEK: .
-
+           Ancak ilk karakter 'g' veya ikinci karakteri 'h' ise bu karakterler de return edilsin
+          ORNEK:
            INPUT      :  goat
                          photo
                          ghost
@@ -21,22 +20,28 @@ public class Q01 {
                          lem
 		 */
 
-        String str = "ghost";
+        Scanner scan = new Scanner(System.in);
+        System.out.println("bir kelime giriniz : ");
+        String kelime = scan.next();//kalem
 
-        System.out.println(changeString(str));
+        System.out.println(ilkIkisiz(kelime));
+    }
+    private static String ilkIkisiz(String kelime) {
+        String kalanHarfler = "";
+        if (kelime.startsWith("gh")) {//ghost
+            kalanHarfler = kelime;
 
+        } else if (kelime.startsWith("g")) {//goat
+            kalanHarfler = kelime.charAt(0) + kelime.substring(2);//gat
+
+        } else if (kelime.charAt(1) == 'h') {//photo
+            kalanHarfler = kelime.substring(1);//hoto
+        } else//kalem
+        {
+            kalanHarfler = kelime.substring(2);//lem
+        }
+        return kalanHarfler;
 
     }
-
-    private static String changeString(String str) {
-        String str2 ="";
-        if (str.charAt(0) =='g' && str.charAt(1)=='h') str2=str;
-        else if (str.charAt(0)=='g') str2=str.substring(0,1)+str.substring(2,str.length());
-        else if(str.charAt(1)=='h') str2= str.substring(1,str.length());
-
-        return str2;
-    }
-
-
 }
 

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Q02 {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 	/*  TASK :
 	 *  Kullanicidan 3 tene pozitif  tam sayi alniz. 
 	 *  bu uc sayinin ucgen olusturma durumunu kontrol ediniz
@@ -18,24 +18,26 @@ public class Q02 {
 		a=b=c ise es kenar ucgen 
 		 
 	 */
-		System.out.println(" 3 tane pozitif tam sayi giriniz :");
 
-		Scanner scan = new Scanner(System.in);
 
-		int num1 = scan.nextInt();
-		int num2 = scan.nextInt();
-		int num3 = scan.nextInt();
+        Scanner input = new Scanner(System.in);
+        System.out.println("Lutfen 3 tam sayi giriniz");
 
-		if (((num1+num2>num3) && (num3>num1-num2)) && ((num1+num3>num2) && (num2>num1-num3)) && ((num2+num3>num1) && (num1>num2-num3))) {
-			System.out.println("Girdiğiniz degerler ile Üçgen olabilir");
-			if (( num1==num2 ) && ( num2 == num3 ) ){
-				System.out.println("Eş kenar üçgendir");
+        int a = input.nextInt();
+        int b = input.nextInt();
+        int c = input.nextInt();
 
-			} else System.out.println("Eşkenar üçgen değildir");
-		} else System.out.println("Girdiğiniz degerler ile üçgen yapılamıyor..");
-	
-		
+        if (a + b > c && a - b < c && a + c > b && a - c < b && b + c > a && b - c < a) {
+            if (a == b && a == c) {
+                System.out.println("ucgen ve eskenar ucgendir");
+            } else {
+                System.out.println("ucgen fakat eskenar degil");
+            }
+        } else {
+            System.out.println("ucgen degildir.");
+        }
 
-	}
+
+    }
 
 }

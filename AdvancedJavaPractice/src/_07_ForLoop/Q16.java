@@ -11,15 +11,15 @@ public class Q16 {
         F F F F F F
         şekli yazdırınız
         */
-        for (int i =65; i <=70 ; i++) {
-            for (int j = 65; j <=i ; j++) {
-                System.out.print((char)i + " ");
+
+        int harf = 65;
+        for (int satir = 0; satir < 6; satir++) { //satır kontrolu
+
+            for (int sutun = 0; sutun <= satir; sutun++) {//sutun kontrolu
+                System.out.print((char) (harf + satir) + " ");
             }
-            System.out.println(" ");
-
+            System.out.println();
         }
-
-
     }
 
 }

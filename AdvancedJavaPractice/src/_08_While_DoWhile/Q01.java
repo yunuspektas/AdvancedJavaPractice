@@ -11,29 +11,31 @@ public class Q01 {
         153 = (1*1*1) + (5*5*5) + (3*3*3) gibi
 
         */
-        int sayininKupu =0;
-        int basmakSayisi = 0;
-        int num1 = 153;
-        int geciciSayi = num1 ;
-        int geciciSayi2 = num1 ;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Lutfen Armstrong oldugunu kontrol edeceginiz tamsayiyi yaziniz");
+        int sayi = scan.nextInt();
 
-        while (geciciSayi>0){        // verilen sayının kaç basamak oldugunu While döngüsü ile buluyoruz
-            geciciSayi/=10;
-            basmakSayisi++;
+        //12345
+        // once gerekli degiskenleri olusturalim
+        int kuplerToplami = 0;
+        int ilkDeger = sayi;
+        int rakam = 0;
+
+        while (sayi != 0) {
+            rakam = sayi % 10;
+            kuplerToplami += rakam * rakam * rakam;
+            sayi /= 10;
+
         }
 
-        for (int i = 1; i <=basmakSayisi ; i++) {
+        // elimde kuplerToplami, ilkDeger , sayi=0 oldu
 
-            sayininKupu+= ((geciciSayi2%10) * (geciciSayi2%10) * (geciciSayi2%10)) ;
-            geciciSayi2 = geciciSayi2/10;
+        if (kuplerToplami == ilkDeger) {
+            System.out.println("Girdiginiz sayi Armstrong sayi");
+        } else System.out.println("Girdiginiz sayi Armstrong sayi degil");
 
-        }
-
-        System.out.print("Girilen sayi : " + num1 + " ");
-        System.out.println( (sayininKupu==num1) ? "Amstrong sayıdır" : "Amstrong sayı değildir" );
+        scan.close();
 
     }
-
-
 
 }

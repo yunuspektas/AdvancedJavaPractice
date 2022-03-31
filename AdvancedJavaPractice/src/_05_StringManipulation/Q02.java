@@ -8,14 +8,17 @@ public class Q02 {
        Kullanıcıdan tek seferde alacağınız 2 kelimelik ad soyadı 2 ayrı kelimeye ayırınız,
        ad ayrı soyad ayrı sekilde ekrana yazdırınız.
        */
-        Scanner scan = new Scanner(System.in);
+        Scanner oku = new Scanner(System.in);
+        System.out.print("Lutfen adinizi ve soyadinizi giriniz = ");
+        String adSoyad = oku.nextLine();
 
-        System.out.println("Lütfen isim ve soyisminizi giriniz :");
-        String nameSurname = scan.nextLine();
+        // Ahmet Yılmaz    substring(başlangıç index, e kadar - dahil değil)
 
-        String name = nameSurname.substring(0, nameSurname.indexOf(" ")); // isim kısmını aldık
-        String surname = nameSurname.substring( nameSurname.indexOf(" ")+1, nameSurname.length() ); // soy-isim kısmını aldık
 
-        System.out.println(" Isminiz : " + name + " Soyisminiz : " + surname );
+        String ad = adSoyad.substring(0, adSoyad.indexOf(" "));
+        String Soyad = adSoyad.substring(adSoyad.indexOf(" ")+ 1);
+
+        System.out.println("ad = " + ad);       //ad = kader
+        System.out.println("Soyad = " + Soyad); //Soyad = Esen
     }
 }

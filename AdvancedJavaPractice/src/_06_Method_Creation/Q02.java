@@ -13,20 +13,25 @@ public class Q02 {
 		         name2= ahmet
 		         Print ==> mehahmetmet
 		*/
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Lutfen 1. isim giriniz:");
+        String isim1 = scan.nextLine().toLowerCase();
 
-        String name1 = "mehmet";
-        String name2 = "ahmet";
-
-        stringManipulation(name1, name2);
-
+        System.out.println("Lutfen 2. isim giriniz:");
+        String isim2 = scan.nextLine().toLowerCase();
+        isimBirlestir(isim1, isim2);
     }
 
-    private static void stringManipulation(String name1, String name2) {
 
-        if (name1.length() % 2 == 0) {
-            System.out.println(name1.substring(0, name1.length() / 2) + name2 + name1.substring((name1.length() / 2), name1.length()));
-        } else System.out.println("name1 cift sayili olmadigi icin ortasina yerlestiremedik");
-
+    public static void isimBirlestir(String isim1, String isim2) {
+        if (isim1.length() % 2 == 0) {
+            System.out.println(isim1.substring(0, (isim1.length() / 2)).concat(isim2).concat(isim1.substring(isim1.length() / 2)));
+        } else {
+            System.out.println("isim1 cift sayili olmadigi icin ortasina yerlestiremedik");
+        }
 
     }
 }
+
+
+

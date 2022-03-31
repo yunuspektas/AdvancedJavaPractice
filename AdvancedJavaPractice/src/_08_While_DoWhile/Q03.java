@@ -15,21 +15,23 @@ public class Q03 {
 
        */
 
-        int sayiTaban = 3;
-        int sayiUst = 4;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Lutfen taban ve uss giriniz");
 
-        usluSayiHesapla(sayiTaban, sayiUst);
+        int taban = scan.nextInt();
+        int uss = scan.nextInt();
+        long sonuc = 1;
 
-    }
+        while (uss != 0) {
+            sonuc *= taban;
 
-    private static void usluSayiHesapla(int sayiTaban, int sayiUst) {
-        int sayac = 1;
-        int sonuc = sayiTaban;
-        do {
-            sonuc *= sayiTaban;
-            sayac++;
-        } while (sayac < sayiUst);
-        System.out.println(sonuc);
+
+            uss--;
+        }
+
+        System.out.println("Cevap: " + sonuc);
+
+        scan.close();
     }
 
 

@@ -9,18 +9,19 @@ public class Q12 {
         Girilen bir sayıya kadar olan sayılardan sadece tek olanlarını ekrana yazdırınız.
          girilen sayı dahil
         */
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Lütfen bir sayı giriniz : ");
-        int num1 = scan.nextInt();
-        int i = 0;
-        while(i <=num1) {
-            if(i%2!=0){
-                System.out.print(i + " ");
-            }
-            i++;
+        Scanner oku = new Scanner(System.in);
+        System.out.print("sayı giriniz =");
+        int sayi = oku.nextInt(); //5
+
+        //sayi--; bu şekilde sayının kendisi işleme girmez
+
+        int toplam = 0;
+        while (sayi > 0) {
+            if (sayi % 2 == 1)
+                System.out.println(sayi);
+
+            sayi--; // 5 4 3 2 1
         }
-
-
 
     }
 }

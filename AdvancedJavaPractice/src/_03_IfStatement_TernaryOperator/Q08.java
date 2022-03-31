@@ -3,39 +3,58 @@ package _03_IfStatement_TernaryOperator;
 import java.util.Scanner;
 
 public class Q08 {
-	/*
-	 * TASK :
+    /*
+     * TASK :
 
-	 * Kullanicidan aldigi urunun adedini ve liste fiyatini alin, kullaniciya
-	 * musteri karti olup olmadigini sorun
-	 * Musteri karti varsa ve 10 urunden fazla alirsa %20, yoksa %15 indirim yapin 
-	 * Musteri karti yoksa ve 10 urunden fazla alirsa %15, 10 urunden az
-	 * alirsa %10 indirim yapan code create ediniz.
-	 */
-	public static void main(String[] args) {
+     * Kullanicidan aldigi urunun adedini ve liste fiyatini alin, kullaniciya
+     * musteri karti olup olmadigini sorun
+     * Musteri karti varsa ve 10 urunden fazla alirsa %20, yoksa %15 indirim yapin
+     * Musteri karti yoksa ve 10 urunden fazla alirsa %15, 10 urunden az
+     * alirsa %10 indirim yapan code create ediniz.
+     */
+    public static void main(String[] args) {
 
-		Scanner scan = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
-		System.out.println("Aldıgınız ürün adedini giriniz : ");
-		int adet = scan.nextInt();
+        System.out.println("Lutfen aldiginiz urunun adedini giriniz");
+        int quantity = scan.nextInt();
 
-		System.out.println("Ürünün liste fiyatını giriniz : ");
-		double price = scan.nextDouble();
+        System.out.println("Lutfen aldiginiz urunun liste fiyatini giriniz");
+        double price = scan.nextDouble();
+        double totalPrice;
 
-		System.out.println("Müşteri kartınız var mı ? Varsa E Yoksa H yazın : ");
-		char card = scan.next().toUpperCase().charAt(0);
+        System.out
+                .println("Musteri kartiniz var mi? Varsa Y yoksa N tusuna basiniz");
+        char card = scan.next().toLowerCase().charAt(0);
 
-		if (card=='E'){
-			if(adet>10){
-				System.out.println("Kartınız oldugu için %20 indirim ile ürünlerinizi " + (price*adet*0.8) + " TL ye alabilirsiniz");
-			} else System.out.println("Kartınız oldugu için %15 indirim ile ürünlerinizi " + (price*adet*0.85) + " TL ye alabilirsiniz");
-		} else if (card=='H'){
-			if(adet>10){
-				System.out.println("Kartınız olmadığı için %15 indirim ile ürünlerinizi " + (price*adet*0.85) + " TL ye alabilirsiniz");
-			} else System.out.println("Kartınız olmadığı için %10 indirim ile ürünlerinizi " + (price*adet*0.90) + " TL ye alabilirsiniz");
-		} else System.out.println("Lutfen kart bilginizi doğru girin");
+        if (card == 'y') {
+            if (quantity > 10) {
+                price *= 0.8; // price = price*0.8
+                totalPrice = price * quantity;
+                System.out
+                        .println("%20 indirim hakki kazandiniz. Toplam odemeniz gereken miktar: "
+                                + totalPrice);
+            } else {
+                price *= 0.85;
+                totalPrice = price * quantity;
+                System.out
+                        .println("%15 indirim hakki kazandiniz. Toplam odemeniz gereken miktar: "
+                                + totalPrice);
+            }
+        } else if (card == 'n') {
+            if (quantity > 10) {
+                price *= 0.85;
+                totalPrice = price * quantity;
+                System.out.println("%15 indirim hakki kazandiniz. Toplam odemeniz gereken miktar: " + totalPrice);
 
-
-	}
+            } else {
+                price = price - price * 10 / 100;
+                totalPrice = price * quantity;
+                System.out.println("%10 indirim hakki kazandiniz. Toplam odemeniz gereken miktar: " + totalPrice);
+            }
+        } else {
+            System.out.println("Yanlis giris yaptiniz. Lutfen tekrar deneyiniz");
+        }
+    }
 
 }

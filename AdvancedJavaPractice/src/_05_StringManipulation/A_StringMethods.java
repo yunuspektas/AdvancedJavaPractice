@@ -8,8 +8,7 @@ public class A_StringMethods {
 
         /** indexOf()
          * char karakter ya da String metnin kacinci indexden basladigini veren bir method dur. Sonuc integer dir.
-         */
-        // contains den farkı indexini verir, contains ise true false
+         */ // contains den farkı indexini verir, contains ise true false
         // 012345678
         String text = "Good";
         System.out.println("G harfinin indexi = " + text.indexOf("G")); // indexler 0 dan başlar
@@ -26,7 +25,7 @@ public class A_StringMethods {
         System.out.println("----------");
 
         /** lastIndexOf()
-         *  String içinde aranan karakter(ler)in sondan itibaren ilk indexini varır
+         *  String içinde aranan karakter(ler)in sondan itibaren ilk indexini verır
          *  indexOf un sondan olan hali fakat index numaraları değişmez.
          */
 

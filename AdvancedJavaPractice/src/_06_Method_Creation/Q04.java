@@ -2,8 +2,6 @@ package _06_Method_Creation;
 
 import java.util.Scanner;
 
-
-
 public class Q04 {
     public static void main(String[] args) {
         /*  TASK :
@@ -17,19 +15,30 @@ public class Q04 {
          */
 
         Scanner scan = new Scanner(System.in);
+        System.out.println("bir string giriniz :");
+        String str = scan.nextLine().toLowerCase();
 
-        System.out.print("Lütfen bir kelime giriniz : " );
-        String word = scan.next();
-
-        stringgManipulation(word);
-
-
+        System.out.println(xyzVarmi(str));
 
     }
 
-    private static void stringgManipulation(String word) {
-        if(word.contains("xyz")) System.out.println("true");
-        else System.out.println("false");
-    }
+    public static boolean xyzVarmi(String str) {
 
+        if (str.contains("xyz")) {
+            return true;
+        } else {
+            return false;
+
+        }
+    /*public static boolean xyzVarmi(String str) {
+        boolean flag=false;
+        if (str.contains("xyz")) {
+            flag=true;
+        }
+
+        return flag;
+    }*/
+    }
 }
+
+

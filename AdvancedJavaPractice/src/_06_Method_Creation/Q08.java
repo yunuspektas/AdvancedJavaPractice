@@ -13,35 +13,30 @@ public class Q08 {
       Output : versin açıklığı zihin arkadaşlara Javacı Allah
        */
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Bir cümle giriniz : ");
-        String input = scan.nextLine();
-        input = input.trim();
-        input = " " + input;
-        String yeniCumle = "";
 
-        int boslukSayisi = boslukSayisiniBul(input);
-        int bosluk = input.lastIndexOf(" ");
 
-        for (int i = 1; i <= boslukSayisi; i++) {
-            bosluk = input.lastIndexOf(" ");
-            yeniCumle += " " + input.substring(bosluk + 1, input.length());
-            input = input.substring(0, bosluk);
+    Scanner scanner = new Scanner(System.in);
+        System.out.print("Cumle giriniz: ");
+    String str = scanner.nextLine();
+
+        System.out.println(
+
+    reverseWord(str));
+
+}
+
+    public static String reverseWord(String str) {
+
+        String[] arr = str.trim().split(" ");//split: her " " space den sonra her elemanı virgülle ayırır.
+
+        String strTers = "";
+
+        for (int i = arr.length - 1; i >= 0; i--) {
+
+            strTers += arr[i] + " ";
         }
 
+        return strTers.trim();
 
-        System.out.println(yeniCumle.trim());
     }
-
-    private static int boslukSayisiniBul(String input) {
-        int boslukSayisi = 0;
-        for (int i = 0; i < input.length(); i++) {
-            if (input.charAt(i) == ' ') {
-                boslukSayisi++;
-            }
-
-        }
-        return boslukSayisi;
-    }
-
 }

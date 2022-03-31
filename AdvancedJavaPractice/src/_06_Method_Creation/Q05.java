@@ -11,16 +11,37 @@ public class Q05 {
  	   Expected Output: Number of words in the string: 9
          */
 
-        String input = "The quick brown fox jumps over the lazy dog.";
-        findNumberOfWords(input);
+
+        int sonuc = cumle("javacı arkadaşlar zehir gibi maaşallah en kısa zamanda çok bin $'lı iş bulurlar");
+
+        System.out.println("Girilen String'te kelime sayısı : " + sonuc);
 
     }
 
-    private static void findNumberOfWords(String input) {
+    public static int cumle(String str) {
         int count = 0;
-        for (int i = 0; i < input.length(); i++) {
-            if (input.charAt(i) == ' ') count++;
+
+        char space = ' ';//bu satırı tanımlamak yerine if şartını ==' ' şeklinde de tanımlayabilirdik.
+
+        for (int a = 0; a < str.length(); a++) {
+            if (str.charAt(a) == space) {
+                count++;
+
+            }
         }
-        System.out.println("Number of words in the string: " + (count + 1));
+
+        return count + 1;//niye count+1 çünki for içinde a<str.length e kadar ama eşit değil 1 eksik verir
+
+
+//
+//        	   String[] words=str.split(" ");
+//
+//
+//
+//        	   return words.length;
+
+
     }
+
 }
+

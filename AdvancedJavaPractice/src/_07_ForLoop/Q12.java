@@ -15,19 +15,20 @@ public class Q12 {
         Girilen sayı=4
         Kareler toplamı=30
      */
-        Scanner scan = new Scanner(System.in);
 
-        System.out.print("Lütfen bir sayı giriniz : ");
-        int num = scan.nextInt();
-        int sum = 0;
 
-        for (int i = 1; i <= num ; i++) {
-            sum +=i*i;
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Bir tamsayı giriniz: ");
+        int sayi = scanner.nextInt();
+        int toplam = 0;
+
+        for (int i = 1; i < sayi; i++) {
+
+            toplam = (i * i) + toplam;
 
         }
-        System.out.println(sum);
-
-
+        System.out.println("Sayıların kareleri toplamı: " + toplam);
 
     }
 }

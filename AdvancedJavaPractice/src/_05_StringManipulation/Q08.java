@@ -1,7 +1,5 @@
 package _05_StringManipulation;
 
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.Scanner;
 
 public class Q08 {
@@ -18,16 +16,24 @@ public class Q08 {
          * output = el
          */
         Scanner scan = new Scanner(System.in);
-        System.out.println("Bir kelime girin : ");
-        String word = scan.next();
+        System.out.println("Lutfen bir string giriniz :");
+        String str = scan.next();
 
+        if (str.length() >= 3) {
+            System.out.println(str.substring(str.length() - 2) + str.substring(str.length() - 2) + str.substring(str.length() - 2));
+        } else {
+            System.out.println(str);
+        }
 
-        System.out.println((word.length() >= 3) ? word.substring(word.length()-2 , word.length())
-                + word.substring(word.length()-2 , word.length())
-                + word.substring(word.length()-2 , word.length())
-                : word );
+        /*
+         * String b = str.substring(1);
+        String c = str.substring(str.length()-2);
 
+        System.out.println(b);
+        System.out.println(c);
 
-
+        String a = str.substring(2);
+         *
+         */
     }
 }

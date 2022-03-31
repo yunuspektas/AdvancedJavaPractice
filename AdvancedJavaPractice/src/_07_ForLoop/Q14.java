@@ -18,24 +18,40 @@ public class Q14 {
 
         */
 
-
     public static void main(String[] args) {
+
+
+
         Scanner scan = new Scanner(System.in);
-        System.out.print("Lütden bir sayı giriniz : ");
-        int num = scan.nextInt();
-        for (int i = 0; i < num; i++) {
-            for (int j = 0; j < num; j++) {
-                if (i + j >= (num-1)) System.out.print("x");
-                else System.out.print(" ");
+        System.out.print("pozitif bir tam sayı giriniz : ");
+        int sayi = scan.nextInt();
+
+        for (int satir = 1; satir <= sayi; satir++) {//satır kontrolu
+            for (int bosluk = sayi - satir; bosluk >= 0; bosluk--) {//bosluk kontrolu
+                System.out.print(" ");
             }
-            System.out.println("");
+            for (int yildiz = 1; yildiz <= satir; yildiz++) {//yıldız kontrolu
+                System.out.print("*");
+
+            }
+            System.out.println();
         }
+         /*
+                    *
+                    * *
+                    * * *
+                    * * * *
+                    * * * * *
+                    şeklini yazdırınız
+             */
 
+        for (int satir = 1; satir <= sayi; satir++) {//satır kontrolu
 
+            for (int yildiz = 1; yildiz <= satir; yildiz++) {//yıldız kontrolu
+                System.out.print("*");
 
-
-
-
-
+            }
+            System.out.println();
+        }
     }
 }

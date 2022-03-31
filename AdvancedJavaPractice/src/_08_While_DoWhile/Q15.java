@@ -19,31 +19,31 @@ public class Q15 {
         Kombinasyon: 10
 
       */
-        Scanner scan = new Scanner(System.in);
-
-        System.out.print("Birinci sayıyı giriniz: ");
-        int num1 = scan.nextInt();
-
-        System.out.print("İkinci sayıyı giriniz: ");
-        int num2 = scan.nextInt();
-
-        int num3 = findFaktorial(num1);
-        int num4 = findFaktorial(num2);
-        int num5 = findFaktorial(num1-num2);
-
-        System.out.println("Kombinasyon : " + num3/(num4*num5));
-
-
-    }
-
-    private static int findFaktorial(int num1) {
-        int fakt = 1;
-        while (num1 > 0) {
-            fakt *= num1;
-            num1 -= 1;
-            findFaktorial(num1);
+        Scanner klavye = new Scanner(System.in);
+        System.out.print("N Değerini Giriniz : ");
+        long n = klavye.nextInt();
+        System.out.print("R Değerini Giriniz : ");
+        long r = klavye.nextInt();
+        long sayac1 = 1;
+        long faktor1 = 1;
+        while (sayac1 <= n) {
+            faktor1 *= sayac1;
+            sayac1++;
         }
-        return fakt;
+        long sayac2 = 1;
+        long faktor2 = 1;
+        while (sayac2 <= r) {
+            faktor2 *= sayac2;
+            sayac2++;
+        }
+        long sayac3 = 1;
+        long faktor3 = 1;
+        while (sayac3 <= n - r) {
+            faktor3 *= sayac3;
+            sayac3++;
+        }
+        System.out.println("kombinasyon = " + faktor1 / (faktor2 * faktor3));
+
     }
 }
 
